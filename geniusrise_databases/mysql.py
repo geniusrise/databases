@@ -1,4 +1,4 @@
-import pymysql
+import pymysql  # type: ignore
 from geniusrise import BatchOutput, Spout, State
 
 

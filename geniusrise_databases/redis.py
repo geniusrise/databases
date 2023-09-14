@@ -1,4 +1,4 @@
-import redis
+import redis  # type: ignore
 from geniusrise import BatchOutput, Spout, State
 
 

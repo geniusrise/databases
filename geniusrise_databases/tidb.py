@@ -1,8 +1,8 @@
 from typing import Any, Dict
 
-import pymysql
+import pymysql  # type: ignore
 from geniusrise import BatchOutput, Spout, State
-from pymysql.cursors import DictCursor
+from pymysql.cursors import DictCursor  # type: ignore
 
 
 class TiDB(Spout):

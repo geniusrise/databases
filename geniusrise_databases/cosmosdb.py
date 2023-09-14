@@ -68,22 +68,22 @@ class CosmosDB(Spout):
 
         try:
             # Connect to the database and collection
-            database = client.get_database_client(database)
-            collection = database.get_container_client(collection)
+            database = client.get_database_client(database)  # type: ignore
+            collection = database.get_container_client(collection)  # type: ignore
 
             # Get the number of documents in the collection
-            document_count = collection.get_item_count()
+            document_count = collection.get_item_count()  # type: ignore
 
             # Iterate through each document in the collection
             processed_documents = 0
-            continuationToken = None
+            continuation_token = None
 
             while True:
                 # Get a batch of documents
                 options = {"partitionKey": "my_partition_key"}
-                if continuationToken:
-                    options["continuation"] = continuationToken
-                response = collection.query_items(query="SELECT * FROM c", options=options)
+                if continuation_token:
+                    options["continuation"] = continuation_token
+                response = collection.query_items(query="SELECT * FROM c", options=options)  # type: ignore
 
                 # Check if there are any documents in the batch
                 if not response:
@@ -97,7 +97,7 @@ class CosmosDB(Spout):
                 self.log.info(f"Total documents processed: {processed_documents}/{document_count}")
 
                 # Get the continuation token
-                continuationToken = response["_continuationToken"]
+                continuation_token = response["_continuation_token"]
 
             # Update the state
             current_state = self.state.get_state(self.id) or {

@@ -73,23 +73,23 @@ class MongoDB(Spout):
             Exception: If unable to connect to the MongoDB server or execute the query.
         """
         # Initialize MongoDB client
-        client = pymongo.MongoClient(host=host, port=port)
+        client = pymongo.MongoClient(host=host, port=port)  # type: ignore
 
         try:
             # Connect to the database
             db = client[database]
-            collection = db[collection]
+            collection = db[collection]  # type: ignore
 
             # Get the number of documents in the collection
-            count = collection.count_documents({})
+            count = collection.count_documents({})  # type: ignore
 
             # Iterate through each document in the collection
-            cursor = collection.find({})
+            cursor = collection.find({})  # type: ignore
             processed_rows = 0
 
             while True:
                 # Get a batch of documents
-                batch = list(cursor.batch_size(100))
+                batch = list(cursor.batch_size(100))  # type: ignore
 
                 # Check if there are any documents in the batch
                 if not batch:

@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-import pymysql.cursors
+import pymysql.cursors  # type: ignore
 from geniusrise import BatchOutput, Spout, State
 
 

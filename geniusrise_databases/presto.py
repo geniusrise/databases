@@ -1,5 +1,5 @@
 import prestodb
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class Presto(Spout):
@@ -93,7 +93,10 @@ class Presto(Spout):
                 self.output.save(row)
 
             # Update the state
-            current_state = self.state.get_state(self.id) or {"success_count": 0, "failure_count": 0}
+            current_state = self.state.get_state(self.id) or {
+                "success_count": 0,
+                "failure_count": 0,
+            }
             current_state["success_count"] += 1
             self.state.set_state(self.id, current_state)
 
@@ -101,7 +104,10 @@ class Presto(Spout):
             self.log.error(f"Error fetching data from Presto: {e}")
 
             # Update the state
-            current_state = self.state.get_state(self.id) or {"success_count": 0, "failure_count": 0}
+            current_state = self.state.get_state(self.id) or {
+                "success_count": 0,
+                "failure_count": 0,
+            }
             current_state["failure_count"] += 1
             self.state.set_state(self.id, current_state)
 

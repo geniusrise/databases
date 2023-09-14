@@ -1,7 +1,8 @@
+from typing import Any, Dict
+
 from cassandra.cluster import Cluster
 from cassandra.query import SimpleStatement
-from geniusrise import Spout, State, BatchOutput
-from typing import Any, Dict
+from geniusrise import BatchOutput, Spout, State
 
 
 class Cassandra(Spout):

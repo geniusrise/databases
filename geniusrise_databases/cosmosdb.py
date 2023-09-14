@@ -1,5 +1,5 @@
 import azure.cosmos.cosmos_client as cosmos_client
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class CosmosDB(Spout):

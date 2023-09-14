@@ -1,6 +1,7 @@
-import boto3
-from geniusrise import Spout, State, BatchOutput
 from typing import Any, Dict
+
+import boto3
+from geniusrise import BatchOutput, Spout, State
 
 
 class DynamoDB(Spout):

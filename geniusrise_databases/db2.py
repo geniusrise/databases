@@ -1,5 +1,5 @@
 import ibm_db
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class DB2(Spout):
@@ -71,7 +71,14 @@ class DB2(Spout):
         """
         # Initialize the DB2 connection
         try:
-            conn = ibm_db.connect(hostname, username, password, database, port=port, ibm_db_ibuf_size=1024 * 1024)
+            conn = ibm_db.connect(
+                hostname,
+                username,
+                password,
+                database,
+                port=port,
+                ibm_db_ibuf_size=1024 * 1024,
+            )
         except Exception as e:
             self.log.error(f"Error connecting to DB2 server: {e}")
             return
@@ -89,7 +96,10 @@ class DB2(Spout):
                 self.output.save(row)
 
             # Update the state
-            current_state = self.state.get_state(self.id) or {"success_count": 0, "failure_count": 0}
+            current_state = self.state.get_state(self.id) or {
+                "success_count": 0,
+                "failure_count": 0,
+            }
             current_state["success_count"] += 1
             self.state.set_state(self.id, current_state)
 
@@ -97,7 +107,10 @@ class DB2(Spout):
             self.log.error(f"Error fetching data from DB2: {e}")
 
             # Update the state
-            current_state = self.state.get_state(self.id) or {"success_count": 0, "failure_count": 0}
+            current_state = self.state.get_state(self.id) or {
+                "success_count": 0,
+                "failure_count": 0,
+            }
             current_state["failure_count"] += 1
             self.state.set_state(self.id, current_state)
 

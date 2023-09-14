@@ -1,5 +1,5 @@
 import pyteradata
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class Teradata(Spout):
@@ -88,7 +88,10 @@ class Teradata(Spout):
                 self.output.save(row)
 
             # Update the state
-            current_state = self.state.get_state(self.id) or {"success_count": 0, "failure_count": 0}
+            current_state = self.state.get_state(self.id) or {
+                "success_count": 0,
+                "failure_count": 0,
+            }
             current_state["success_count"] += 1
             self.state.set_state(self.id, current_state)
 
@@ -96,7 +99,10 @@ class Teradata(Spout):
             self.log.error(f"Error fetching data from Teradata: {e}")
 
             # Update the state
-            current_state = self.state.get_state(self.id) or {"success_count": 0, "failure_count": 0}
+            current_state = self.state.get_state(self.id) or {
+                "success_count": 0,
+                "failure_count": 0,
+            }
             current_state["failure_count"] += 1
             self.state.set_state(self.id, current_state)
 

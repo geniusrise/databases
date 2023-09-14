@@ -1,6 +1,6 @@
-from azure.cosmosdb.table.tableservice import TableService
 from azure.cosmosdb.table.models import Entity
-from geniusrise import Spout, State, BatchOutput
+from azure.cosmosdb.table.tableservice import TableService
+from geniusrise import BatchOutput, Spout, State
 
 
 class AzureTableStorage(Spout):

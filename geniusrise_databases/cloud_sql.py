@@ -1,6 +1,7 @@
-import pymysql.cursors
-from geniusrise import Spout, State, BatchOutput
 from typing import Any, Dict
+
+import pymysql.cursors
+from geniusrise import BatchOutput, Spout, State
 
 
 class GoogleCloudSQL(Spout):
@@ -52,7 +53,14 @@ class GoogleCloudSQL(Spout):
         self.top_level_arguments = kwargs
 
     def fetch(
-        self, host: str, port: int, user: str, password: str, database: str, query: str, page_size: int = 100
+        self,
+        host: str,
+        port: int,
+        user: str,
+        password: str,
+        database: str,
+        query: str,
+        page_size: int = 100,
     ) -> None:
         """
         📖 Fetch data from a Google Cloud SQL database and save it in batch.

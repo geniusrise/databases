@@ -1,5 +1,5 @@
+from geniusrise import BatchOutput, Spout, State
 from pymongo import MongoClient
-from geniusrise import Spout, State, BatchOutput
 
 
 class DocumentDB(Spout):

@@ -1,8 +1,9 @@
-import boto3
-import sqlite3
 import os
+import sqlite3
 from typing import Any, Dict
-from geniusrise import Spout, State, BatchOutput
+
+import boto3
+from geniusrise import BatchOutput, Spout, State
 
 
 class SQLite(Spout):

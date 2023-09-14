@@ -1,6 +1,6 @@
 import psycopg2
+from geniusrise import BatchOutput, Spout, State
 from psycopg2.extras import DictCursor
-from geniusrise import Spout, State, BatchOutput
 
 
 class PostgreSQL(Spout):

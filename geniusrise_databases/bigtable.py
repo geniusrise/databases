@@ -1,5 +1,5 @@
+from geniusrise import BatchOutput, Spout, State
 from google.cloud import bigtable
-from geniusrise import Spout, State, BatchOutput
 
 
 class Bigtable(Spout):

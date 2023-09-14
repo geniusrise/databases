@@ -1,5 +1,5 @@
 import redis
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class Redis(Spout):

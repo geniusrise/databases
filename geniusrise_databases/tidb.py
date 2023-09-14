@@ -1,7 +1,8 @@
-import pymysql
-from pymysql.cursors import DictCursor
-from geniusrise import Spout, State, BatchOutput
 from typing import Any, Dict
+
+import pymysql
+from geniusrise import BatchOutput, Spout, State
+from pymysql.cursors import DictCursor
 
 
 class TiDB(Spout):
@@ -79,7 +80,12 @@ class TiDB(Spout):
         """
         # Initialize TiDB connection
         connection = pymysql.connect(
-            host=host, port=port, user=user, password=password, database=database, cursorclass=DictCursor
+            host=host,
+            port=port,
+            user=user,
+            password=password,
+            database=database,
+            cursorclass=DictCursor,
         )
 
         try:

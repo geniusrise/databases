@@ -1,7 +1,8 @@
-from couchbase.cluster import Cluster, ClusterOptions
-from couchbase.auth import PasswordAuthenticator
-from geniusrise import Spout, State, BatchOutput
 from typing import Any, Dict
+
+from couchbase.auth import PasswordAuthenticator
+from couchbase.cluster import Cluster, ClusterOptions
+from geniusrise import BatchOutput, Spout, State
 
 
 class Couchbase(Spout):

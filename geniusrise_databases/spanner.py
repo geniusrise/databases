@@ -1,5 +1,5 @@
 import google.cloud.spanner
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class Spanner(Spout):

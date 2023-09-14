@@ -1,5 +1,5 @@
 import google.cloud.bigquery as bigquery
-from geniusrise import Spout, State, BatchOutput
+from geniusrise import BatchOutput, Spout, State
 
 
 class BigQuery(Spout):

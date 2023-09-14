@@ -1,6 +1,7 @@
-from elasticsearch import Elasticsearch as ES
-from geniusrise import Spout, State, BatchOutput
 from typing import Any, Dict
+
+from elasticsearch import Elasticsearch as ES
+from geniusrise import BatchOutput, Spout, State
 
 
 class Elasticsearch(Spout):

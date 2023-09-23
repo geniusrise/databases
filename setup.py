@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as f:
 
 setup(
     name="geniusrise-databases",
-    version="0.1.1",
+    version="0.1.2",
     packages=find_packages(exclude=["tests", "tests.*"]),
     install_requires=requirements,
     python_requires=">=3.10",
@@ -22,7 +22,6 @@ setup(
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Build Tools",
-        "License :: OSI Approved :: GNU Affero General Public License v3",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",

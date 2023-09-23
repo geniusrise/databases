@@ -2,6 +2,7 @@ annotated-types==0.5.0
 ansicolors==1.1.8
 arango==0.2.1
 argparse-color-formatter==1.2.2.post2
+argparse-manpage==4.4
 async-timeout==4.0.3
 azure-common==1.1.28
 azure-core==1.29.4
@@ -38,7 +39,7 @@ emoji==2.7.0
 env-file==2020.12.3
 exceptiongroup==1.1.2
 flake8==6.1.0
-geniusrise==0.0.12
+geniusrise==0.0.16
 geomet==0.2.1.post1
 google-api-core==2.11.1
 google-auth==2.17.3

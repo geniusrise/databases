@@ -50,7 +50,6 @@ class OpenTSDB(Spout):
                 output:
                     type: "batch"
                     args:
-                        output_folder: "/path/to/output"
                         bucket: "my_bucket"
                         s3_folder: "s3/folder"
         ```

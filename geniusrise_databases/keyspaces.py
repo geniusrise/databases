@@ -31,9 +31,8 @@ class AWSKeyspaces(Spout):
         ```bash
         genius AWSKeyspaces rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args region_name=us-east-1 cluster_name=mycluster table_name=mytable

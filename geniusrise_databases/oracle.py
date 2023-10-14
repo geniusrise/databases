@@ -31,9 +31,8 @@ class Oracle(Spout):
         ```bash
         genius OracleSQL rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args server=localhost port=1521 service_name=myservice user=myuser password=mypassword

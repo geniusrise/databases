@@ -35,9 +35,8 @@ class SQLite(Spout):
         ```bash
         genius SQLite rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args s3_bucket=my_s3_bucket s3_key=mydb.sqlite query="SELECT * FROM table" page_size=100

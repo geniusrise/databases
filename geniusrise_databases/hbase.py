@@ -31,9 +31,8 @@ class HBase(Spout):
         ```bash
         genius HBase rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost table=my_table row_start=start row_stop=stop batch_size=100

@@ -31,9 +31,8 @@ class BigQuery(Spout):
         ```bash
         genius BigQuery rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --project_id my_project_id dataset_id=my_dataset table_id=my_table

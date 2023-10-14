@@ -31,9 +31,8 @@ class CosmosDB(Spout):
         ```bash
         genius CosmosDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args endpoint=https://mycosmosdb.documents.azure.com:443/ my_database my_collection

@@ -31,9 +31,8 @@ class MySQL(Spout):
         ```bash
         genius MySQL rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost port=3306 user=root password=root database=mydb query="SELECT * FROM table" page_size=100

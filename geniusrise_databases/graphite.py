@@ -31,9 +31,8 @@ class Graphite(Spout):
         ```bash
         genius Graphite rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args url=http://localhost:8080 target=stats_counts.myapp output_format=json from=-1h until=now

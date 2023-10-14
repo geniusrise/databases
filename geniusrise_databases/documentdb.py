@@ -31,9 +31,8 @@ class DocumentDB(Spout):
         ```bash
         genius DocumentDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost port=27017 user=myuser password=mypassword database=mydb collection=mycollection query="{}" page_size=100

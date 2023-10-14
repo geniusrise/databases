@@ -32,9 +32,8 @@ class AzureTableStorage(Spout):
         ```bash
         genius AzureTableStorage rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args account_name=my_account account_key=my_key table_name=my_table

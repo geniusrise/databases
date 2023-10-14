@@ -33,9 +33,8 @@ class GoogleCloudSQL(Spout):
         ```bash
         genius GoogleCloudSQL rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=127.0.0.1 port=3306 user=root password=root database=mydb query="SELECT * FROM table" page_size=100

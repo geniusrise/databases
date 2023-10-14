@@ -31,9 +31,8 @@ class NuoDB(Spout):
         ```bash
         genius NuoDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args url=http://mynuodbhost:8080/v1/statement query="SELECT * FROM mytable"

@@ -31,9 +31,8 @@ class InfluxDB(Spout):
         ```bash
         genius InfluxDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost port=8086 username=myusername password=mypassword database=mydatabase

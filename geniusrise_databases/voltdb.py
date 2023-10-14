@@ -31,9 +31,8 @@ class VoltDB(Spout):
         ```bash
         genius VoltDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost port=21212 username=myuser password=<PASSWORD>

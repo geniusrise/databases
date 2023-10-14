@@ -31,9 +31,8 @@ class LDAP(Spout):
         ```bash
         genius LDAP rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args url=ldap://myldap.example.com:389 bind_dn="cn=admin,dc=example,dc=com" bind_password="password" search_base="dc=example,dc=com" search_filter="(objectClass=person)" attributes=["cn", "givenName", "sn"]

@@ -31,9 +31,8 @@ class MongoDB(Spout):
         ```bash
         genius MongoDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost port=27017 username=myusername password=mypassword database=mydatabase collection=mycollection

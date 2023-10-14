@@ -31,9 +31,8 @@ class Bigtable(Spout):
         ```bash
         genius Bigtable rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args project_id=my_project instance_id=my_instance table_id=my_table

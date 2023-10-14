@@ -31,9 +31,8 @@ class Vertica(Spout):
         ```bash
         genius Vertica rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --host my_host port=5433 user=my_user password=my_password database=my_database query="SELECT * FROM my_table"

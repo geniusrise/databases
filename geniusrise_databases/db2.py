@@ -31,9 +31,8 @@ class DB2(Spout):
         ```bash
         genius DB2 rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args hostname=mydb2.example.com port=50000 username=myusername password=mypassword database=mydb

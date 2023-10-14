@@ -31,9 +31,8 @@ class Sybase(Spout):
         ```bash
         genius Sybase rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost port=5000 user=sa password=secret database=mydb query="SELECT * FROM table" page_size=100

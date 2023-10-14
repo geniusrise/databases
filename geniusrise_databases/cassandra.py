@@ -34,9 +34,8 @@ class Cassandra(Spout):
         ```bash
         genius Cassandra rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args hosts=localhost keyspace=my_keyspace query="SELECT * FROM my_table" page_size=100

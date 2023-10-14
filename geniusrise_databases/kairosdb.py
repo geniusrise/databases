@@ -31,9 +31,8 @@ class KairosDB(Spout):
         ```bash
         genius KairosDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args url=http://mykairosdbhost:8080/api/v1/datapoints query="SELECT * FROM mymetric"

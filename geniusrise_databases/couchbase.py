@@ -34,9 +34,8 @@ class Couchbase(Spout):
         ```bash
         genius CouchbaseSpout rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=localhost username=admin password=password bucket_name=my_bucket query="SELECT * FROM my_bucket" page_size=100

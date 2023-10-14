@@ -31,9 +31,8 @@ class MemSQL(Spout):
         ```bash
         genius MemSQL rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args host=mymemsqlhost user=myuser password=<PASSWORD> database=mydatabase query="SELECT * FROM mytable"

@@ -31,9 +31,8 @@ class SQLServer(Spout):
         ```bash
         genius SQLServer rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args server=localhost port=1433 user=myuser password=mypassword database=mydatabase query="SELECT * FROM mytable"

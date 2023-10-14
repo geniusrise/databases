@@ -33,9 +33,8 @@ class DynamoDB(Spout):
         ```bash
         genius DynamoDB rise \
             batch \
-                --output_folder /path/to/output \
-                --bucket my_bucket \
-                --s3_folder s3/folder \
+                --output_s3_bucket my_bucket \
+                --output_s3_folder s3/folder \
             none \
             fetch \
                 --args table_name=my_table page_size=100
